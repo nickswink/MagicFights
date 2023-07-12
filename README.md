@@ -2,8 +2,10 @@
 
 ## Description
 This a helper program to create Mp4 files with hidden shellcode data inside of them. After embedding the data inside a legitimate Mp4 file you will need a loader to run the shellcode from the file. Here is the POC of a loader for the files this spits out - [MagicFightsLoaderC](https://github.com/nickswink/MagicFightsLoaderC)
-
 Large files may take time for it to parse
+
+## Why it could be cool?
+It has been whispered that certain AV/EDRs may completely overlook non-executable file types such as Mp4 files. We may see more threat actors start hiding sections of code inside obscure file types such as these.
 
    PS> .\MagicFights.exe
    Usage: MagicFights.exe <MP4FilePath> <RawDataFilePath> <OutputFilePath>
@@ -18,6 +20,7 @@ Testing the embedded shellcode with a POC [loader](https://github.com/nickswink/
 ### Other cool ideas
 * Embed/extract using stegonography
 * Use NtAPIs to open and read file
-
+* The loading and execution of the actual shellcode could be improved a lot for evasions sake
+  
 ### Credits
 * Ekko sleep function copied from @C5Spider [https://github.com/Cracked5pider/Ekko](https://github.com/Cracked5pider/Ekko)
